@@ -1,7 +1,10 @@
- <p align="center">
+
+<p align="center">
 <img width="200" src="https://raw.githubusercontent.com/wisespira/Artemis-Generative-Art/master/logo.png">
+ 
  Bad artists copy. Good artists steal.
 —  Pablo Picasso, 1881-1973, Spanish painter
+
 </p>
 
 <br>
