@@ -1,10 +1,12 @@
-## for data
+## From Data
 import pandas as pd
 import numpy as np
-## web scraping 
+## Web Scraping 
 import requests
 from bs4 import BeautifulSoup
+## Image manipulation
 from PIL import Image
+## Filing Functionality 
 import io
 import os
 import hashlib
