@@ -1,5 +1,5 @@
  <p align="center">
-<img width="200" src="https://raw.githubusercontent.com/wisespira/Artemis-Generative-Art/master/logo%20with%20text.png">
+<img width="200" src="https://raw.githubusercontent.com/wisespira/Artemis-Generative-Art/master/logo.png">
 </p>
 <br>
 <h1>Artemis Generative Art</h1>
