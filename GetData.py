@@ -11,11 +11,16 @@ import io
 import os
 import hashlib
 
-artLoc = pd.read_csv("./painting_dataset_2018.csv")
-#print(artLoc.describe())
 
-print(artLoc['Image URL'][0])
-#result = requests.get(artLoc['Image URL'][0])
+
+im = Image.open("C:/Users/Admin/Desktop/ART/data/Abstract_gallery/Abstract_image_0.jpg")
+im.show()
+
+
+
+
+
+
 
 
 def persist_image(folder_path:str,url:str):
@@ -35,4 +40,10 @@ def persist_image(folder_path:str,url:str):
     except Exception as e:
         print(f"ERROR - Could not save {url} - {e}")
 
-persist_image(r"C:\Users\Admin\Desktop\ART", "https://d3d00swyhr67nd.cloudfront.net/w1200h1200/collection/SFK/SED/SFK_SED_ST_1992_9_587-001.jpg")
+#persist_image(r"C:\Users\Admin\Desktop\ART", "https://d3d00swyhr67nd.cloudfront.net/w1200h1200/collection/SFK/SED/SFK_SED_ST_1992_9_587-001.jpg")
+
+#artLoc = pd.read_csv("./painting_dataset_2018.csv")
+#print(artLoc.describe())
+
+#print(artLoc['Image URL'][0])
+#result = requests.get(artLoc['Image URL'][0])
