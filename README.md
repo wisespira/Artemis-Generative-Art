@@ -4,8 +4,8 @@
  
 </p>
 <p align="center">
- Bad artists copy. Good artists steal.
-—  Pablo Picasso
+ *Bad artists copy. Good artists steal.
+—  Pablo Picasso*
 </p>
 
 <h1>Artemis Generative Art</h1>
