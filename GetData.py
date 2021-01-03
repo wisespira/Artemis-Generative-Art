@@ -20,16 +20,18 @@ import hashlib
 
 
 
-im = Image.open("C:/Users/Admin/Desktop/ART/data/Abstract_gallery/Abstract_image_0.jpg")
+im = Image.open("C:/Users/Admin/Desktop/ART/data/Abstract_gallery/Abstract_image_50.jpg")
 #im.show()
 width, height = im.size
 
 trans = transforms.ToPILImage()
 trans1 = transforms.ToTensor()
 
-
-print(trans1(im))
-trans(trans1(im)).show()
+tensorPic = trans1(im)
+print(tensorPic.shape)
+tensorPic[2] = 0.75
+print(tensorPic)
+trans(tensorPic[1]).show()
 
 
 """
