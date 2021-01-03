@@ -24,12 +24,32 @@ im = Image.open("C:/Users/Admin/Desktop/ART/data/Abstract_gallery/Abstract_image
 #im.show()
 width, height = im.size
 
-
-
 trans = transforms.ToPILImage()
 trans1 = transforms.ToTensor()
+
+
 print(trans1(im))
 trans(trans1(im)).show()
+
+
+"""
+## Build the encoder
+"""
+
+latent_dim = 2
+
+encoder_inputs = keras.Input(shape=(28, 28, 1))
+x = layers.Conv2D(32, 3, activation="relu", strides=2, padding="same")(encoder_inputs)
+x = layers.Conv2D(64, 3, activation="relu", strides=2, padding="same")(x)
+x = layers.Flatten()(x)
+x = layers.Dense(16, activation="relu")(x)
+z_mean = layers.Dense(latent_dim, name="z_mean")(x)
+z_log_var = layers.Dense(latent_dim, name="z_log_var")(x)
+#z = Sampling()([z_mean, z_log_var])
+#encoder = keras.Model(encoder_inputs, [z_mean, z_log_var, z], name="encoder")
+#encoder.summary()
+
+
 #plt.imshow(trans(trans1(im)))
 
 
