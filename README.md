@@ -11,4 +11,4 @@
 <h1>Artemis Generative Art</h1>
 This project aims to create abstract art using a VAE neural network.  
 <h1>Data</h1>
-Data from: https://www.kaggle.com/bryanb/abstract-art-gallery
+Learning Data From: https://www.kaggle.com/bryanb/abstract-art-gallery
