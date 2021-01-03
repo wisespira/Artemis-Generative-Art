@@ -5,7 +5,7 @@
 </p>
 <p align="center">
  Bad artists copy. Good artists steal.
-—  Pablo Picasso, 1881-1973, Spanish painter
+—  Pablo Picasso
 </p>
 
 <h1>Artemis Generative Art</h1>
