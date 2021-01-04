@@ -23,6 +23,8 @@ import hashlib
 im = Image.open("C:/Users/Admin/Desktop/ART/data/Abstract_gallery/Abstract_image_50.jpg")
 #im.show()
 width, height = im.size
+size = 100, 100
+
 
 trans = transforms.ToPILImage()
 trans1 = transforms.ToTensor()
@@ -31,22 +33,28 @@ tensorPic = trans1(im)
 print(tensorPic.shape)
 tensorPic[2] = 0.75
 print(tensorPic)
-trans(tensorPic[1]).show()
+#trans(tensorPic[1]).show()
 
+
+im.thumbnail(size, Image.ANTIALIAS)
+im.show()
 
 """
 ## Build the encoder
 """
 
 latent_dim = 2
+#https://stackoverflow.com/questions/44747343/keras-input-explanation-input-shape-units-batch-size-dim-etc#:~:text=The%20input%20shape&text=In%20Keras%2C%20the%20input%20layer,shape%20as%20your%20training%20data.
+# 30 images of 50x50 pixels in RGB (3 channels)
+encoder_inputs = keras.Input(shape=(30,100,100,3))
+#x = layers.Conv2D(32, 3, activation="relu", strides=2, padding="same")(encoder_inputs)
+#x = layers.Conv2D(64, 3, activation="relu", strides=2, padding="same")(x)
+#x = layers.Flatten()(x)
+#x = layers.Dense(16, activation="relu")(x)
+#z_mean = layers.Dense(latent_dim, name="z_mean")(x)
+#z_log_var = layers.Dense(latent_dim, name="z_log_var")(x)
 
-encoder_inputs = keras.Input(shape=(28, 28, 1))
-x = layers.Conv2D(32, 3, activation="relu", strides=2, padding="same")(encoder_inputs)
-x = layers.Conv2D(64, 3, activation="relu", strides=2, padding="same")(x)
-x = layers.Flatten()(x)
-x = layers.Dense(16, activation="relu")(x)
-z_mean = layers.Dense(latent_dim, name="z_mean")(x)
-z_log_var = layers.Dense(latent_dim, name="z_log_var")(x)
+
 #z = Sampling()([z_mean, z_log_var])
 #encoder = keras.Model(encoder_inputs, [z_mean, z_log_var, z], name="encoder")
 #encoder.summary()
